@@ -49,7 +49,7 @@
 | 08 KimYoungHee (abcde) | n/a | - | - | - | - | - | max5982 |
 | 09 YangYengJun (yang-yeongjun) | n/a | - | - | - | - | - | J-WBaek |
 | 10 OhTaeYeong (otation) | n/a | - | - | - | - | - | max5982 |
-| 11 KimYoungHee (abcde) | n/a | - | - | - | - | - | max5982 |
+| 12 JangHaejun (g2072044) | n/a | - | - | - | - | - | max5982 |
 | 12 KimYoungHee (abcde) | n/a | - | - | - | - | - | max5982 |
 | 13 KimYoungHee (abcde) | n/a | - | - | - | - | - | max5982 |
 | 14 KimYoungHee (abcde) | n/a | - | - | - | - | - | max5982 |
