@@ -42,7 +42,7 @@
 | 01 Kim Bumgyu (creator928) | n/a | - | - | - | - | - | J-WBaek |
 | 02 KimYoungHee (abcde) | n/a | - | - | - | - | - | max5982 |
 | 03 KimYoungHee (abcde) | n/a | - | - | - | - | - | max5982 |
-| 04 KimYoungHee (abcde) | n/a | - | - | - | - | - | max5982 |
+| 04 KimHyungSuk (BrotherrockKim) | n/a | - | - | - | - | - | max5982 |
 | 05 MoonJaeWoong (spotSide) | n/a | - | - | - | - | - | max5982 |
 | 06 ParkKyounggyu (Gyue2) | n/a | - | - | - | - | - | max5982 |
 | 07 KimYoungHee (abcde) | n/a | - | - | - | - | - | max5982 |
