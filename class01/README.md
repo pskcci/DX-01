@@ -51,7 +51,7 @@
 | 10 OhTaeYeong (otation) | n/a | - | - | - | - | - | max5982 |
 | 11 KimYoungHee (abcde) | n/a | - | - | - | - | - | max5982 |
 | 12 KimYoungHee (abcde) | n/a | - | - | - | - | - | max5982 |
-| 13 KimYoungHee (abcde) | n/a | - | - | - | - | - | max5982 |
+| 13 JeongSooBin (soobin1113) | n/a | - | - | - | - | - | JWBACK |
 | 14 ChoeEunho (ChoeEunho) | n/a | - | - | - | - | - | J-WBaek |
 | 15 KimYoungHee (abcde) | n/a | - | - | - | - | - | max5982 |
 | 16 KimYoungHee (abcde) | n/a | - | - | - | - | - | mokiya |

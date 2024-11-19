@@ -45,7 +45,7 @@
 | 10 OhTaeYeong (otation) | n/a | - | - | - | - | litcoder |
 | 11 KimYoungHee (abcde) | n/a | - | - | - | - | litcoder |
 | 12 KimYoungHee (abcde) | n/a | - | - | - | - | litcoder |
-| 13 KimYoungHee (abcde) | n/a | - | - | - | - | litcoder |
+| 13 JeongSooBin (soobin1113) | n/a | - | - | - | - | JWBaek |
 | 14 ChoeEunHo (ChoeEunho) | n/a | - | - | - | - | J-WBaek |
 | 15 KimYoungHee (abcde) | n/a | - | - | - | - | litcoder |
 | 16 KimYoungHee (abcde) | n/a | - | - | - | - | jerry-jaeseong-lee |
