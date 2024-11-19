@@ -52,7 +52,7 @@
 | 11 KimYoungHee (abcde) | n/a | - | - | - | - | - | max5982 |
 | 12 KimYoungHee (abcde) | n/a | - | - | - | - | - | max5982 |
 | 13 KimYoungHee (abcde) | n/a | - | - | - | - | - | max5982 |
-| 14 KimYoungHee (abcde) | n/a | - | - | - | - | - | max5982 |
+| 14 ChoeEunho (ChoeEunho) | n/a | - | - | - | - | - | J-WBaek |
 | 15 KimYoungHee (abcde) | n/a | - | - | - | - | - | max5982 |
 | 16 KimYoungHee (abcde) | n/a | - | - | - | - | - | mokiya |
 | 17 KimYoungHee (abcde) | n/a | - | - | - | - | - | mokiya |
