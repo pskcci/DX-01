@@ -39,20 +39,20 @@
 
 | 영문이름 (GitHub id)           | Team No | HW#1 | HW#2 | HW#3 | HW#4 | HW#5 | Reviewer |
 |-------------------------------|---------|------|------|------|------|------|----------|
-| 01 KimYoungHee (abcde) | n/a | - | - | - | - | - | max5982 |
+| 01 Kim Bumgyu (creator928) | n/a | - | - | - | - | - | J-WBaek |
 | 02 KimYoungHee (abcde) | n/a | - | - | - | - | - | max5982 |
 | 03 KimYoungHee (abcde) | n/a | - | - | - | - | - | max5982 |
-| 04 KimYoungHee (abcde) | n/a | - | - | - | - | - | max5982 |
-| 05 KimYoungHee (abcde) | n/a | - | - | - | - | - | max5982 |
-| 06 KimYoungHee (abcde) | n/a | - | - | - | - | - | max5982 |
+| 04 KimHyungSuk (BrotherrockKim) | n/a | - | - | - | - | - | max5982 |
+| 05 MoonJaeWoong (spotSide) | n/a | - | - | - | - | - | max5982 |
+| 06 ParkKyounggyu (Gyue2) | n/a | - | - | - | - | - | max5982 |
 | 07 ParkCheolWoo (parkcheolwoo8334) | n/a | - | - | - | - | - | max5982 |
-| 08 KimYoungHee (abcde) | n/a | - | - | - | - | - | max5982 |
-| 09 KimYoungHee (abcde) | n/a | - | - | - | - | - | max5982 |
-| 10 KimYoungHee (abcde) | n/a | - | - | - | - | - | max5982 |
+| 08 YangSeungYong (syyang0127) | n/a | - | - | - | - | - | J-WBaek |
+| 09 YangYengJun (yang-yeongjun) | n/a | - | - | - | - | - | J-WBaek |
+| 10 OhTaeYeong (otation) | n/a | - | - | - | - | - | max5982 |
 | 11 KimYoungHee (abcde) | n/a | - | - | - | - | - | max5982 |
 | 12 KimYoungHee (abcde) | n/a | - | - | - | - | - | max5982 |
 | 13 KimYoungHee (abcde) | n/a | - | - | - | - | - | max5982 |
-| 14 KimYoungHee (abcde) | n/a | - | - | - | - | - | max5982 |
+| 14 ChoeEunho (ChoeEunho) | n/a | - | - | - | - | - | J-WBaek |
 | 15 KimYoungHee (abcde) | n/a | - | - | - | - | - | max5982 |
 | 16 KimYoungHee (abcde) | n/a | - | - | - | - | - | mokiya |
 | 17 KimYoungHee (abcde) | n/a | - | - | - | - | - | mokiya |
