@@ -35,12 +35,12 @@
 |-------------------------------|---------|------|------|------|-------|----------|
 | 01 Kim Bumgyu (creator928) | n/a | - | - | - | - | - | J-WBaek |
 | 02 KimYoungHee (abcde) | n/a | - | - | - | - | litcoder |
-| 03 KimYoungHee (abcde) | n/a | - | - | - | - | litcoder |
+| 03 KimHunWoo (py2468) | n/a | - | - | - | - | litcoder |
 | 04 KimHyungSuk (BrotherrockKim ) | n/a | - | - | - | - | litcoder |
 | 05 MoonJaeWoong (spotSide) | n/a | - | - | - | - | litcoder |
 | 06 ParkKyounggyu (Gyue2) | n/a | - | - | - | - | litcoder |
-| 07 KimYoungHee (abcde) | n/a | - | - | - | - | litcoder |
-| 08 KimYoungHee (abcde) | n/a | - | - | - | - | litcoder |
+| 07 ParkCheolWoo (parkcheolwoo8334) | n/a | - | - | - | - | litcoder |
+| 08 YangSeungYong (syyang0127) | n/a | - | - | - | - | J-WBaek |
 | 09 YangYeongJun (yang-yeongjun) | n/a | - | - | - | - | J-WBaek |
 | 10 OhTaeYeong (otation) | n/a | - | - | - | - | litcoder |
 | 11 KimYoungHee (abcde) | n/a | - | - | - | - | litcoder |
