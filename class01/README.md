@@ -46,7 +46,7 @@
 | 05 MoonJaeWoong (spotSide) | n/a | - | - | - | - | - | max5982 |
 | 06 ParkKyounggyu (Gyue2) | n/a | - | - | - | - | - | max5982 |
 | 07 KimYoungHee (abcde) | n/a | - | - | - | - | - | max5982 |
-| 08 KimYoungHee (abcde) | n/a | - | - | - | - | - | max5982 |
+| 08 YangSeungYong (syyang0127) | n/a | - | - | - | - | - | J-WBaek |
 | 09 YangYengJun (yang-yeongjun) | n/a | - | - | - | - | - | J-WBaek |
 | 10 OhTaeYeong (otation) | n/a | - | - | - | - | - | max5982 |
 | 11 KimYoungHee (abcde) | n/a | - | - | - | - | - | max5982 |
