@@ -33,16 +33,16 @@
 
 | 영문이름 (GitHub id)           | Team No | HW#1 | HW#2 | HW#3 | Final | Reviewer |
 |-------------------------------|---------|------|------|------|-------|----------|
-| 01 KimYoungHee (abcde) | n/a | - | - | - | - | litcoder |
+| 01 Kim Bumgyu (creator928) | n/a | - | - | - | - | - | J-WBaek |
 | 02 KimYoungHee (abcde) | n/a | - | - | - | - | litcoder |
 | 03 KimYoungHee (abcde) | n/a | - | - | - | - | litcoder |
 | 04 KimYoungHee (abcde) | n/a | - | - | - | - | litcoder |
 | 05 MoonJaeWoong (spotSide) | n/a | - | - | - | - | litcoder |
-| 06 KimYoungHee (abcde) | n/a | - | - | - | - | litcoder |
+| 06 ParkKyounggyu (Gyue2) | n/a | - | - | - | - | litcoder |
 | 07 KimYoungHee (abcde) | n/a | - | - | - | - | litcoder |
 | 08 KimYoungHee (abcde) | n/a | - | - | - | - | litcoder |
 | 09 KimYoungHee (abcde) | n/a | - | - | - | - | litcoder |
-| 10 KimYoungHee (abcde) | n/a | - | - | - | - | litcoder |
+| 10 OhTaeYeong (otation) | n/a | - | - | - | - | litcoder |
 | 11 KimYoungHee (abcde) | n/a | - | - | - | - | litcoder |
 | 12 KimYoungHee (abcde) | n/a | - | - | - | - | litcoder |
 | 13 KimYoungHee (abcde) | n/a | - | - | - | - | litcoder |
