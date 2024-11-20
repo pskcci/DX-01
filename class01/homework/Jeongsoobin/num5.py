@@ -4,6 +4,9 @@ import numpy as np
 # 이미지 읽기
 img = cv2.imread('lena.png', cv2.IMREAD_GRAYSCALE)
 
+if img is None:
+    print("이미지 파일을 읽을 수 없습니다. 경로를 확인하세요.")
+    exit()
 # 커널 정의
 kernel = np.array([[1, 1, 1],
                    [1, -8, 1],
