@@ -47,7 +47,7 @@
 | 06 KimYoungHee (abcde) | n/a | - | - | - | - | - | max5982 |
 | 07 KimYoungHee (abcde) | n/a | - | - | - | - | - | max5982 |
 | 08 KimYoungHee (abcde) | n/a | - | - | - | - | - | max5982 |
-| 09 YangYengJun (yang-yeongjun) | n/a | - | - | - | - | - | J-WBaek |
+| 09 YangYeongJun (yang-yeongjun) | n/a | - | - | - | - | - | J-WBaek |
 | 10 KimYoungHee (abcde) | n/a | - | - | - | - | - | max5982 |
 | 11 KimYoungHee (abcde) | n/a | - | - | - | - | - | max5982 |
 | 12 KimYoungHee (abcde) | n/a | - | - | - | - | - | max5982 |
