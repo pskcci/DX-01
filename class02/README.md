@@ -44,7 +44,7 @@
 | 09 YangYeongJun (yang-yeongjun) | n/a | - | - | - | - | J-WBaek |
 | 10 OhTaeYeong (otation) | n/a | - | - | - | - | litcoder |
 | 11 KimYoungHee (abcde) | n/a | - | - | - | - | litcoder |
-| 12 KimYoungHee (abcde) | n/a | - | - | - | - | litcoder |
+| 12 JangHaeJun (g2072044) | n/a | - | - | - | - | litcoder |
 | 13 JeongSooBin (soobin1113) | n/a | - | - | - | - | JWBaek |
 | 14 ChoeEunHo (ChoeEunho) | n/a | - | - | - | - | J-WBaek |
 | 15 KimYoungHee (abcde) | n/a | - | - | - | - | litcoder |
