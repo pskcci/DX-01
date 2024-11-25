@@ -44,7 +44,7 @@
 | 03 KimHunWoo (py2468) | n/a | - | - | - | - | - | max5982 |
 | 04 KimHyungSuk (BrotherrockKim) | n/a | - | - | - | - | - | max5982 |
 | 05 MoonJaeWoong (spotSide) | n/a | - | - | - | - | - | max5982 |
-| 06 ParkKyounggyu (Gyue2) | n/a | - | - | - | - | - | max5982 |
+| 06 ParkKyounggyu (Gyue2) | n/a | - | - | - | - | - | J-WBaek |
 | 07 ParkCheolWoo (parkcheolwoo8334) | n/a | - | - | - | - | - | max5982 |
 | 08 YangSeungYong (syyang0127) | n/a | - | - | - | - | - | J-WBaek |
 | 09 YangYeongJun (yang-yeongjun) | n/a | - | - | - | - | - | J-WBaek |
