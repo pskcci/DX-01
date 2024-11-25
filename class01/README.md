@@ -47,7 +47,7 @@
 | 06 ParkKyounggyu (Gyue2) | n/a | - | - | - | - | - | max5982 |
 | 07 ParkCheolWoo (parkcheolwoo8334) | n/a | - | - | - | - | - | max5982 |
 | 08 YangSeungYong (syyang0127) | n/a | - | - | - | - | - | J-WBaek |
-| 09 YangYengJun (yang-yeongjun) | n/a | - | - | - | - | - | J-WBaek |
+| 09 YangYeongJun (yang-yeongjun) | n/a | - | - | - | - | - | J-WBaek |
 | 10 OhTaeYeong (otation) | n/a | - | - | - | - | - | max5982 |
 | 11 KimYoungHee (abcde) | n/a | - | - | - | - | - | max5982 |
 | 12 JangHaeJun (g2072044) | n/a | - | - | - | - | - | max5982 |
