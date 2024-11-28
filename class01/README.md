@@ -51,7 +51,7 @@
 | 08 YangYeongJun (yang-yeongjun)     |   n/a   |  o   |  o   |  o   |  o   |  o   |  o   |  o   | J-WBaek |
 | 09 OhTaeYeong (otation)             |   n/a   |  o   |  o   |  o   |  o   |  o   |  o   |  o   | J-WBaek |
 | 10 JangHaeJun (g2072044)            |   n/a   |  o   |  o   |  o   |  o   |  o   |  o   |  o   | J-WBaek |
-| 11 JeongSooBin (soobin1113)         |   n/a   |  o   |  o   |  o   |  x   |  x   |  x   |  x   | J-WBACK |
+| 11 JeongSooBin (soobin1113)         |   n/a   |  o   |  o   |  o   |  o   |  o   |  x   |  x   | J-WBaek |
 | 12 ChoeEunho (ChoeEunho)            |   n/a   |  o   |  o   |  o   |  o   |  o   |  o   |  o   | J-WBaek |
 
 
