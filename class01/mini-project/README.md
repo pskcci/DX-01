@@ -1,5 +1,18 @@
 # Mini Project
 
+### Team : pkg & ceh
+
+<특정 모션을 인식하여 배경을 변경 및 촬영 프로그램 개발>
+
+* Members
+  | Name | Role |
+  |----|----|
+  | 박경규 | Project member, 프로젝트 멤버 1 |
+  | 오태영 | Project member,  프로젝트 멤버 2 |
+
+* Project Github : 
+
+* 발표자료 : 
 
 ### Team: JEONG & MOON
 
