@@ -53,7 +53,7 @@
 * 발표자료 : TBD
 
 
-### Team: Chulwoo & TY
+### Team: kinANDjang
 <운전 집중 감시 및 감정 표현 프로그램>
 * Members
   | Name | Role |
