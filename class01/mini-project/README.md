@@ -1,8 +1,20 @@
 # Mini Project
 
 
-### Team: JEONG & MOON
+### Team : pkg & ceh
+<특정 모션을 인식하여 배경을 변경 및 촬영 프로그램 개발>
 
+* Members
+  | Name | Role |
+  |----|----|
+  | 박경규 | Project member, 프로젝트 멤버 1 |
+  | 오태영 | Project member,  프로젝트 멤버 2 |
+
+* Project Github : 
+* 발표자료 : 
+
+
+### Team: JEONG & MOON
 <장애물을 회피하고 목표지점에 도달하면 성공을 반환하는 프로그램 >
 
 * Members
@@ -27,15 +39,13 @@
 * 발표자료 : TBD
 
 
-### Team: 
-
+### Team: double_y
 < 자세교정 도우미 프로그램 >
-
 * Members
   | Name | Role |
   |----|----|
-  | 정수빈 | Project member, 프로젝트 멤버1 |
-  | 문재웅 | Project member, 프로젝트 멤버2 |
+  | 양승용 | Project member, 프로젝트 멤버1 |
+  | 양영준 | Project member, 프로젝트 멤버2 |
 
 * Project Github :
 * 발표자료 : 
