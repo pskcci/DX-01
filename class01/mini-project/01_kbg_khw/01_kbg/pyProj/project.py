@@ -541,11 +541,14 @@ def draw_poses(img, poses, point_score_threshold, skeleton=default_skeleton):
             "1": ((sq_x - 3 * offset, sq_y + offset), (sq_x - offset, sq_y + 3 * offset)),  # 주황색
             "3": ((sq_x + offset, sq_y + offset), (sq_x + 3 * offset, sq_y + 3 * offset)),  # 주황색
             "7": ((sq_x - 3 * offset, sq_y - 3 * offset), (sq_x - offset, sq_y - offset)),  # 주황색
-            "9": ((sq_x + offset, sq_y - 3 * offset), (sq_x + 3 * offset, sq_y - offset))  # 주황색
+            "9": ((sq_x + offset, sq_y - 3 * offset), (sq_x + 3 * offset, sq_y - offset)),  # 주황색
+            "bt": ((1000 - offset, 500 - offset), (1000 + offset, 500 + offset))  # 초록색 사각형
         }
         # 사각형 그리기
         for key, (start, end) in rectangles.items():
             color = (0, 0, 255) if key in ["2", "4", "6", "8"] else (0, 165, 255)  # 빨간색 또는 주황색
+            if key == "bt":
+                color = (0, 255, 0)
             cv2.rectangle(img, start, end, color, -1)
         
         global conx_r, cony_r
@@ -571,8 +574,12 @@ def draw_poses(img, poses, point_score_threshold, skeleton=default_skeleton):
             elif rectangles["9"][0][0] <= p10[0] <= rectangles["9"][1][0] and rectangles["9"][0][1] <= p10[1] <= rectangles["9"][1][1]:
                 conx_r += 7  # 9 영역: 대각선 아래 오른쪽 이동
                 cony_r -= 7
-        cv2.rectangle(img, (conx_r, cony), (conx_r+200, cony_r+200), (255, 0, 0), -1)
-
+        if p9 is not None:
+            if rectangles["bt"][0][0] <= p9[0] <= rectangles["bt"][1][0] and rectangles["bt"][0][1] <= p9[1] <= rectangles["bt"][1][1]:
+                cv2.rectangle(img, (conx_r, cony_r), (conx_r+200, cony_r+200), (0, 0, 255), -1)
+            else:
+                cv2.rectangle(img, (conx_r, cony_r), (conx_r+200, cony_r+200), (255, 0, 0), -1)
+        
         # Draw limbs.
         for i, j in skeleton:
             if points_scores[i] > point_score_threshold and points_scores[j] > point_score_threshold:
