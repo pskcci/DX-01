@@ -53,6 +53,17 @@
 * 발표자료 : TBD
 
 
+### Team: Chulwoo & TY
+<운전 집중 감시 및 감정 표현 프로그램>
+* Members
+  | Name | Role |
+  |----|----|
+  | 김형석 | Project lead, 프로젝트를 총괄하고 망하면 책임진다. |
+  | 장해준 | Project manager, 마일스톤을 생성하고 프로젝트 이슈 진행상황을 관리한다. |
+
+* Project Github : TBD
+* 발표자료 : TBD
+
 ### Team: double_y
 < 자세교정 도우미 프로그램 >
 * Members
