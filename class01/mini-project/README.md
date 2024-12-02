@@ -1,5 +1,19 @@
 # Mini Project
 
+### Team: Kim Bumgyu & Kim Hunwoo
+
+<모션 인식 기반 원격 조작 프로그램>
+
+* Members
+  | Name | Role |
+  |----|----|
+  | 김범규 | Project member, 프로젝트 멤버1 |
+  | 김헌우 | Project member, 프로젝트 멤버2 |
+
+* Project Github : 
+ 
+* 발표자료 : 
+
 
 ### Team: JEONG & MOON
 
