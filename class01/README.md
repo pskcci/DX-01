@@ -31,39 +31,29 @@
 
 ### 제출현황
 
-* HW#1 :
-* HW#2 :
-* HW#3 :
-* HW#4 :
-* HW#5 :
+* HW#1 : [[Class01 HW#1] Github Issue 실습 - <내이름>](https://github.com/pskcci/DX-01/issues/1)
+* HW#2 : [[Class01 HW#2] Github PR 실습 - <내이름>](https://github.com/pskcci/DX-01/issues/2)
+* HW#3 : [[Class01 HW#3] Github PR 실습 - Table 수정](https://github.com/pskcci/DX-01/issues/3)
+* HW#4 : [[Class01 HW#4] python 과제 및 math 실습](https://github.com/pskcci/DX-01/issues/4)
+* HW#5 : [[Class01 HW#5] Perceptron & ANN 실습](https://github.com/pskcci/DX-01/issues/5)
+* HW#6 : [[Class01 HW#6] CNN 실습](https://github.com/pskcci/DX-01/issues/6)
+* HW#7 : [[Class01 HW#7] RNN 실습](https://github.com/pskcci/DX-01/issues/7)
 
-| 영문이름 (GitHub id)           | Team No | HW#1 | HW#2 | HW#3 | HW#4 | HW#5 | Reviewer |
-|-------------------------------|---------|------|------|------|------|------|----------|
-| 01 KimYoungHee (abcde) | n/a | - | - | - | - | - | max5982 |
-| 02 KimYoungHee (abcde) | n/a | - | - | - | - | - | max5982 |
-| 03 KimYoungHee (abcde) | n/a | - | - | - | - | - | max5982 |
-| 04 KimYoungHee (abcde) | n/a | - | - | - | - | - | max5982 |
-| 05 MoonJaeWoong (spotSide) | n/a | - | - | - | - | - | max5982 |
-| 06 KimYoungHee (abcde) | n/a | - | - | - | - | - | max5982 |
-| 07 KimYoungHee (abcde) | n/a | - | - | - | - | - | max5982 |
-| 08 KimYoungHee (abcde) | n/a | - | - | - | - | - | max5982 |
-| 09 KimYoungHee (abcde) | n/a | - | - | - | - | - | max5982 |
-| 10 KimYoungHee (abcde) | n/a | - | - | - | - | - | max5982 |
-| 11 KimYoungHee (abcde) | n/a | - | - | - | - | - | max5982 |
-| 12 KimYoungHee (abcde) | n/a | - | - | - | - | - | max5982 |
-| 13 KimYoungHee (abcde) | n/a | - | - | - | - | - | max5982 |
-| 14 KimYoungHee (abcde) | n/a | - | - | - | - | - | max5982 |
-| 15 KimYoungHee (abcde) | n/a | - | - | - | - | - | max5982 |
-| 16 KimYoungHee (abcde) | n/a | - | - | - | - | - | mokiya |
-| 17 KimYoungHee (abcde) | n/a | - | - | - | - | - | mokiya |
-| 18 KimYoungHee (abcde) | n/a | - | - | - | - | - | mokiya |
-| 19 KimYoungHee (abcde) | n/a | - | - | - | - | - | mokiya |
-| 20 KimYoungHee (abcde) | n/a | - | - | - | - | - | mokiya |
-| 21 KimYoungHee (abcde) | n/a | - | - | - | - | - | mokiya |
-| 22 KimYoungHee (abcde) | n/a | - | - | - | - | - | mokiya |
-| 23 KimYoungHee (abcde) | n/a | - | - | - | - | - | mokiya |
-| 24 KimYoungHee (abcde) | n/a | - | - | - | - | - | mokiya |
-| 25 KimYoungHee (abcde) | n/a | - | - | - | - | - | mokiya |
+| 영문이름 (GitHub id)                 | Team No | HW#1 | HW#2 | HW#3 | HW#4 | HW#5 | HW#6 | HW#7 | Reviewer |
+|-------------------------------------|---------|------|------|------|------|------|------|------|----------|
+| 01 Kim Bumgyu (creator928)          |   n/a   |  o   |  o   |  o   |  o   |  o   |  o   |  o   | J-WBaek |
+| 02 KimHunWoo (py2468)               |   n/a   |  o   |  o   |  o   |  o   |  o   |  o   |  x   | J-WBaek |
+| 03 KimHyungSuk (BrotherrockKim)     |   n/a   |  o   |  o   |  o   |  o   |  o   |  o   |  o   | J-WBaek |
+| 04 MoonJaeWoong (spotSide)          |   n/a   |  o   |  o   |  o   |  o   |  o   |  o   |  o   | J-WBaek |
+| 05 ParkKyounggyu (Gyue2)            |   n/a   |  o   |  o   |  o   |  o   |  o   |  o   |  o   | J-WBaek |
+| 06 ParkCheolWoo (parkcheolwoo8334)  |   n/a   |  o   |  o   |  o   |  o   |  o   |  o   |  x   | J-WBaek |
+| 07 YangSeungYong (syyang0127)       |   n/a   |  o   |  o   |  o   |  x   |  o   |  x   |  x   | J-WBaek |
+| 08 YangYeongJun (yang-yeongjun)     |   n/a   |  o   |  o   |  o   |  o   |  o   |  o   |  o   | J-WBaek |
+| 09 OhTaeYeong (otation)             |   n/a   |  o   |  o   |  o   |  o   |  o   |  o   |  o   | J-WBaek |
+| 10 JangHaeJun (g2072044)            |   n/a   |  o   |  o   |  o   |  o   |  o   |  o   |  o   | J-WBaek |
+| 11 JeongSooBin (soobin1113)         |   n/a   |  o   |  o   |  o   |  o   |  o   |  x   |  x   | J-WBaek |
+| 12 ChoeEunho (ChoeEunho)            |   n/a   |  o   |  o   |  o   |  o   |  o   |  o   |  o   | J-WBaek |
+
 
 ### Mini Projects
 
