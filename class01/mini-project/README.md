@@ -1,5 +1,21 @@
 # Mini Project
 
+
+### Team: JEONG & MOON
+
+<장애물을 회피하고 목표지점에 도달하면 성공을 반환하는 프로그램 >
+
+* Members
+  | Name | Role |
+  |----|----|
+  | 정수빈 | Project member, 프로젝트 멤버1 |
+  | 문재웅 | Project member, 프로젝트 멤버2 |
+
+* Project Github : 
+ 
+* 발표자료 : 
+
+
 ### Chulwoo & TY
 <악기를 처음 배우는 사람에게 운지법을 지시하여 악보를 볼 줄 몰라도 연주를 도와주는 AR프로그램의 개발>
 * Members
@@ -10,3 +26,4 @@
 
 * Project Github : TBD
 * 발표자료 : TBD
+
