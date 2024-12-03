@@ -2,17 +2,17 @@
 
 ### Team: Kim Bumgyu & Kim Hunwoo
 
-<모션 인식 기반 원격 조작 프로그램>
+<모션 인식 기반 원격 조작 객체 탐지 프로그램>
 
 * Members
   | Name | Role |
   |----|----|
-  | 김범규 | Project member, 프로젝트 멤버1 |
-  | 김헌우 | Project member, 프로젝트 멤버2 |
+  | 김범규 | Project member, 기본 알고리즘 개발, 프로그램 통합 |
+  | 김헌우 | Project member, 환경 설정 함수, 멀티 스레딩 기능 구현  |
 
-* Project Github : 
+* Project Github : https://github.com/pskcci/DX-01/tree/main/class01/mini-project/01_kbg_khw
  
-* 발표자료 : 
+* 발표자료 : https://github.com/pskcci/DX-01/blob/main/class01/mini-project/01_kbg_khw/01_kbg_khw_ppt.odp
 
 
 ### Team: JEONG & MOON
