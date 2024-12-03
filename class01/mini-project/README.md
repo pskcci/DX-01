@@ -22,10 +22,10 @@
   | Name | Role |
   |----|----|
   | 박경규 | Project member, 프로젝트 멤버 1 |
-  | 오태영 | Project member,  프로젝트 멤버 2 |
+  | 최은호 | Project member,  프로젝트 멤버 2 |
 
-* Project Github : 
-* 발표자료 : 
+* Project Github : https://github.com/pskcci/DX-01/tree/main/class01/mini-project/04_pkg_ceh
+* 발표자료 : https://github.com/pskcci/DX-01/blob/main/class01/mini-project/04_pkg_ceh/04_pkg_ceh_ppt.odp 
 
 
 ### Team: JEONG & MOON
