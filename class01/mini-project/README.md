@@ -72,6 +72,6 @@
   | 양승용 | Project member, 프로젝트 멤버1 |
   | 양영준 | Project member, 프로젝트 멤버2 |
 
-* Project Github :
-* 발표자료 : 
+* Project Github : https://github.com/pskcci/DX-01/tree/main/class01/mini-project/02_double_y
+* 발표자료 : https://github.com/pskcci/DX-01/blob/main/class01/mini-project/02_double_y/2%EC%A1%B0%20Mini%20Project.pptx
 
