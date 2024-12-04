@@ -493,155 +493,144 @@ default_skeleton = (
     (4, 6),
 )
 
+
+
+
+
 def draw_poses(img, poses, point_score_threshold, skeleton=default_skeleton):
-    global sec_1
-    global neck
-    global onesec
-    global maintime
-    global waist
-    global wrist
-    global twist
+    global sec_1, neck, onesec, maintime, waist, wrist, twist
+
+    # 사람이 감지되지 않았을 경우 원본 이미지를 반환합니다.
     if poses.size == 0:
         return img
-    sec = time.time() - maintime
-    onesec = onesec + sec
-    #print(onesec)
-    img_limbs = np.copy(img)
+
+    # 감지된 포즈 중 가장 큰 바운딩 박스를 가진 사람을 선택
+    largest_area = 0
+    largest_pose = None
+
     for pose in poses:
-        points = pose[:, :2].astype(np.int32)
-        points_scores = pose[:, 2]
-        # Draw joints.
-        #변수 선언
-        rsh = None # right shoulder
-        lsh = None # left shoulder
+        points = pose[:, :2].astype(np.int32)  # 관절 좌표
+        points_scores = pose[:, 2]  # 관절 점수
         
-        rear = None # right ear
-        lear = None # left ear
-
-        rpvis = None # right pelvis
-        lpvis = None # lef pelvis
-
-        rank = None # right ankle
-        lank = None # left ankle
-
-        rwrist = None # right wrist
-        relbow = None # right elbow
+        # 바운딩 박스 계산
+        x_coords = points[:, 0]
+        y_coords = points[:, 1]
+        valid_points = points_scores > point_score_threshold  # 신뢰도 기준 필터
         
-        lwrist = None # left  wrist
-        lelbow = None # left  elbow
+        if valid_points.sum() > 0:
+            min_x, max_x = x_coords[valid_points].min(), x_coords[valid_points].max()
+            min_y, max_y = y_coords[valid_points].min(), y_coords[valid_points].max()
 
-        for i, (p, v) in enumerate(zip(points, points_scores)):
-            if v > point_score_threshold:
-                cv2.circle(img, tuple(p), 5, colors[i], 5)
-                #print(tuple(p),colors[i])
-                if i == 3:
-                    rear = tuple(p)
-                if i == 4 :
-                    lear = tuple(p)
-                if i == 5:
-                    rsh = tuple(p)
-                if i == 6:
-                    lsh = tuple(p)
-                if i == 7:
-                    relbow = tuple(p)
-                if i == 9:
-                    rwrist = tuple(p)
-                if i == 11:
-                    rpvis = tuple(p)
-                if i == 12:
-                    lpvis = tuple(p)
-                if i == 15:
-                    rank = tuple(p)
-                if i == 16:
-                    lank = tuple(p)
+            area = (max_x - min_x) * (max_y - min_y)  # 바운딩 박스 영역 계산
 
+            if area > largest_area:
+                largest_area = area
+                largest_pose = pose
 
-        if onesec >= 1:
-            #거북목(좌/우)    
-            if rsh is not None and rear is not None:
-                if abs(rsh[0] - rear[0]) > 40:
-                    neck += 1
-                    #print(neck)
-                    
-                    
+    # 유효한 포즈가 없을 경우 원본 이미지를 반환
+    if largest_pose is None:
+        return img
 
-            if lsh is not None and lear is not None:
-                if abs(lsh[0] - lear[0]) > 40:
-                    neck += 1
-                    #print(neck)
-                    
-                    
-            #허리(좌/우)
-            if rsh is not None and rpvis is not None:
-                if abs(rsh[0] - rpvis[0]) > 80:
-                    waist += 1
-                    print("waist:",waist)
+    # 가장 큰 포즈를 기반으로 분석 진행
+    pose = largest_pose
+    points = pose[:, :2].astype(np.int32)  # 관절 좌표
+    points_scores = pose[:, 2]  # 관절 점수
 
-            if lsh is not None and lpvis is not None:
-                if abs(lsh[0] - lpvis[0]) > 80:
-                    waist += 1
-                    print("waist:",waist)
-                     
-            #다리 꼬기(발목 높이가 기준)
-            if rank is not None and lank is not None:
-                if abs(rank[1] - lank[1]) > 30:
-                    twist += 1
-                    print("twist:",twist)
-            #손목 상하상태(좌/우)
-            if rwrist is not None and relbow is not None:
-                if relbow[1] - rwrist[1]  > 50:
-                    wrist += 1
-                    print("wrist:",wrist)
+    sec = time.time() - maintime
+    onesec += sec
+
+    img_limbs = np.copy(img)
+
+    # 주요 관절 변수 초기화
+    rsh, lsh, rear, lear = None, None, None, None
+    rpvis, lpvis, rank, lank = None, None, None, None
+    rwrist, relbow, lwrist, lelbow = None, None, None, None
+
+    for i, (p, v) in enumerate(zip(points, points_scores)):
+        if v > point_score_threshold:
+            cv2.circle(img, tuple(p), 5, colors[i % len(colors)], 5)  # 관절 점 그리기
             
-            if lwrist is not None and lelbow is not None:
-                if lelbow[1] - lwrist[1]  > 50:
-                    wrist += 1
-                    print("wrist:",wrist)
-            sec_1 += 1
-            print(sec_1)
-            onesec = 0 
-            
-        if sec_1 == 10:
-            if neck >= 7:
-                print("현재 목의 자세가 좋지 않습니다. 목 스트레칭을 진행해 주세요.") 
-            if waist >= 7:
-                print("허리 수술 3500만원")
-                waist = 0
-            else:
-                waist = 0
+            # 관절 번호에 따라 변수 할당
+            if i == 3: rear = tuple(p)  # 오른쪽 귀
+            if i == 4: lear = tuple(p)  # 왼쪽 귀
+            if i == 5: rsh = tuple(p)  # 오른쪽 어깨
+            if i == 6: lsh = tuple(p)  # 왼쪽 어깨
+            if i == 7: relbow = tuple(p)  # 오른쪽 팔꿈치
+            if i == 9: rwrist = tuple(p)  # 오른쪽 손목
+            if i == 11: rpvis = tuple(p)  # 오른쪽 골반
+            if i == 12: lpvis = tuple(p)  # 왼쪽 골반
+            if i == 15: rank = tuple(p)  # 오른쪽 발목
+            if i == 16: lank = tuple(p)  # 왼쪽 발목
 
-            if wrist >= 7 :
-                print("페이커도 손목부상 당하더라...")
-                wrist = 0
-            else:
-                wrist = 0
+    if onesec >= 1:
+        # 자세 문제 분석
+        if rsh and rear and abs(rsh[0] - rear[0]) > 40:  # 오른쪽 거북목
+            neck += 1
 
-            if twist >= 7:
-                print("현재 골반이 틀어질 위험이 있습니다 골반 스트레칭을 권장합니다.")
-                twist = 0
-            else:
-                twist = 0
+        if lsh and lear and abs(lsh[0] - lear[0]) > 40:  # 왼쪽 거북목
+            neck += 1
 
-            sec_1 = 0
+        if rsh and rpvis and abs(rsh[0] - rpvis[0]) > 80:  # 오른쪽 허리
+            waist += 1
+
+        if lsh and lpvis and abs(lsh[0] - lpvis[0]) > 80:  # 왼쪽 허리
+            waist += 1
+
+        if rank and lank and abs(rank[1] - lank[1]) > 30:  # 다리 꼬기
+            twist += 1
+
+        if rwrist and relbow and (relbow[1] - rwrist[1]) > 50:  # 오른쪽 손목
+            wrist += 1
+
+        if lwrist and lelbow and (lelbow[1] - lwrist[1]) > 50:  # 왼쪽 손목
+            wrist += 1
+
+        sec_1 += 1
+        print(sec_1)
+        onesec = 0 
+
+    if sec_1 == 10:
+        # 자세 피드백 제공
+        if neck >= 7:
+            print("현재 목의 자세가 좋지 않습니다. 목 스트레칭을 진행해 주세요.")
+        if waist >= 7:
+            print("허리 자세가 좋지 않습니다. 허리 스트레칭을 권장합니다.")
+        if wrist >= 7:
+            print("손목 상태가 좋지 않습니다. 손목 스트레칭을 권장합니다.")
+        if twist >= 7:
+            print("현재 골반이 틀어질 위험이 있습니다. 골반 스트레칭을 권장합니다.")
+
+        neck = waist = wrist = twist = sec_1 = 0
 
         # Draw limbs.
-        for i, j in skeleton:
-            if points_scores[i] > point_score_threshold and points_scores[j] > point_score_threshold:
-                cv2.line(
-                    img_limbs,
-                    tuple(points[i]),
-                    tuple(points[j]),
-                    color=colors[j],
-                    thickness=4,
-                )
+    for i, j in skeleton:
+        if points_scores[i] > point_score_threshold and points_scores[j] > point_score_threshold:
+            cv2.line(
+                img_limbs,
+                tuple(points[i]),
+                tuple(points[j]),
+                color=colors[j],
+                thickness=4,
+            )
     cv2.addWeighted(img, 0.4, img_limbs, 0.6, 0, dst=img)
     
     return img
 
+
+
 # def draw_poses(img, poses, point_score_threshold, skeleton=default_skeleton):
+#     global sec_1
+#     global neck
+#     global onesec
+#     global maintime
+#     global waist
+#     global wrist
+#     global twist
 #     if poses.size == 0:
 #         return img
-
+#     sec = time.time() - maintime
+#     onesec = onesec + sec
+#     #print(onesec)
 #     img_limbs = np.copy(img)
 #     for pose in poses:
 #         points = pose[:, :2].astype(np.int32)
@@ -658,10 +647,13 @@ def draw_poses(img, poses, point_score_threshold, skeleton=default_skeleton):
 #         lpvis = None # lef pelvis
 
 #         rank = None # right ankle
-#         lank = None # lef ankle
+#         lank = None # left ankle
 
 #         rwrist = None # right wrist
 #         relbow = None # right elbow
+        
+#         lwrist = None # left  wrist
+#         lelbow = None # left  elbow
 
 #         for i, (p, v) in enumerate(zip(points, points_scores)):
 #             if v > point_score_threshold:
@@ -689,43 +681,88 @@ def draw_poses(img, poses, point_score_threshold, skeleton=default_skeleton):
 #                     lank = tuple(p)
 
 
-#         if rsh is not None and rear is not None:
-#             if abs(rsh[0] - rear[0]) > 40:
-#                 cv2.putText(img,"turtle neck !!!", (400,100),cv2.FONT_HERSHEY_COMPLEX,2,(0,0,255),5)
+#         if onesec >= 1:
+#             #거북목(좌/우)    
+#             if rsh is not None and rear is not None:
+#                 if abs(rsh[0] - rear[0]) > 40:
+#                     neck += 1
+#                     #print(neck)
+                    
+                    
 
-#         if lsh is not None and lear is not None:
-#             if abs(lsh[0] - lear[0]) > 40:
-#                 cv2.putText(img,"turtle neck !!!", (400,100),cv2.FONT_HERSHEY_COMPLEX,2,(0,0,255),5)
+#             if lsh is not None and lear is not None:
+#                 if abs(lsh[0] - lear[0]) > 40:
+#                     neck += 1
+#                     #print(neck)
+                    
+                    
+#             #허리(좌/우)
+#             if rsh is not None and rpvis is not None:
+#                 if abs(rsh[0] - rpvis[0]) > 80:
+#                     waist += 1
+#                     print("waist:",waist)
 
-#         if rsh is not None and rpvis is not None:
-#             if abs(rsh[0] - rpvis[0]) > 80:
-#                 cv2.putText(img,"be careful !!!", (400,300),cv2.FONT_HERSHEY_COMPLEX,2,(0,0,255),5)
-
-#         if lsh is not None and lpvis is not None:
-#             if abs(lsh[0] - lpvis[0]) > 80:
-#                 cv2.putText(img,"be careful !!!", (400,300),cv2.FONT_HERSHEY_COMPLEX,2,(0,0,255),5)  
-
-#         if rank is not None and lank is not None:
-#             if abs(rank[1] - lank[1]) > 30:
-#                 cv2.putText(img,"your legs twisted", (400,500),cv2.FONT_HERSHEY_COMPLEX,2,(0,0,255),5)
-        
-#         if rwrist is not None and relbow is not None:
-#             if relbow[1] - rwrist[1]  > 50:
-#                 cv2.putText(img,"dont be faker", (400,200),cv2.FONT_HERSHEY_COMPLEX,2,(0,0,255),5)
+#             if lsh is not None and lpvis is not None:
+#                 if abs(lsh[0] - lpvis[0]) > 80:
+#                     waist += 1
+#                     print("waist:",waist)
+                     
+#             #다리 꼬기(발목 높이가 기준)
+#             if rank is not None and lank is not None:
+#                 if abs(rank[1] - lank[1]) > 30:
+#                     twist += 1
+#                     print("twist:",twist)
+#             #손목 상하상태(좌/우)
+#             if rwrist is not None and relbow is not None:
+#                 if relbow[1] - rwrist[1]  > 50:
+#                     wrist += 1
+#                     print("wrist:",wrist)
             
-#         # Draw limbs.
-#         for i, j in skeleton:
-#             if points_scores[i] > point_score_threshold and points_scores[j] > point_score_threshold:
-#                 cv2.line(
-#                     img_limbs,
-#                     tuple(points[i]),
-#                     tuple(points[j]),
-#                     color=colors[j],
-#                     thickness=4,
-#                 )
-#     cv2.addWeighted(img, 0.4, img_limbs, 0.6, 0, dst=img)
+#             if lwrist is not None and lelbow is not None:
+#                 if lelbow[1] - lwrist[1]  > 50:
+#                     wrist += 1
+#                     print("wrist:",wrist)
+#             sec_1 += 1
+#             print(sec_1)
+#             onesec = 0 
+            
+#         if sec_1 == 10:
+#             if neck >= 7:
+#                 print("현재 목의 자세가 좋지 않습니다. 목 스트레칭을 진행해 주세요.") 
+#             if waist >= 7:
+#                 print("허리 수술 3500만원")
+#                 waist = 0
+#             else:
+#                 waist = 0
+
+#             if wrist >= 7 :
+#                 print("페이커도 손목부상 당하더라...")
+#                 wrist = 0
+#             else:
+#                 wrist = 0
+
+#             if twist >= 7:
+#                 print("현재 골반이 틀어질 위험이 있습니다 골반 스트레칭을 권장합니다.")
+#                 twist = 0
+#             else:
+#                 twist = 0
+
+#             sec_1 = 0
+
+    #     # Draw limbs.
+    #     for i, j in skeleton:
+    #         if points_scores[i] > point_score_threshold and points_scores[j] > point_score_threshold:
+    #             cv2.line(
+    #                 img_limbs,
+    #                 tuple(points[i]),
+    #                 tuple(points[j]),
+    #                 color=colors[j],
+    #                 thickness=4,
+    #             )
+    # cv2.addWeighted(img, 0.4, img_limbs, 0.6, 0, dst=img)
     
-#     return img
+    # return img
+
 
 # Main processing function to run pose estimation.
 def run_pose_estimation(source=0, flip=False, use_popup=False, skip_first_frames=0):
@@ -783,18 +820,18 @@ def run_pose_estimation(source=0, flip=False, use_popup=False, skip_first_frames
 
             _, f_width = frame.shape[:2]
             # mean processing time [ms]
-            processing_time = np.mean(processing_times) * 1000
-            fps = 1000 / processing_time
-            cv2.putText(
-                frame,
-                f"Inference time: {processing_time:.1f}ms ({fps:.1f} FPS)",
-                (20, 40),
-                cv2.FONT_HERSHEY_COMPLEX,
-                f_width / 1000,
-                (0, 0, 255),
-                1,
-                cv2.LINE_AA,
-            )
+            # processing_time = np.mean(processing_times) * 1000
+            # fps = 1000 / processing_time
+            # cv2.putText(
+            #     frame,
+            #     f"Inference time: {processing_time:.1f}ms ({fps:.1f} FPS)",
+            #     (20, 40),
+            #     cv2.FONT_HERSHEY_COMPLEX,
+            #     f_width / 1000,
+            #     (0, 0, 255),
+            #     1,
+            #     cv2.LINE_AA,
+            # )
 
             # Use this workaround if there is flickering.
             if use_popup:
