@@ -17,6 +17,9 @@ import collections
 from IPython import display
 import threading
 import queue
+import warnings
+
+
 
 midas_model_path = None
 pose_model_path = None
@@ -136,7 +139,7 @@ class DepthProcessor:
     def convert_result_to_image(self, result, colormap="viridis"):
         """뎁스 결과를 컬러맵으로 변환합니다."""
         import matplotlib.cm
-        cmap = matplotlib.cm.get_cmap(colormap)
+        cmap = matplotlib.colormaps[colormap]
         result = result.squeeze(0)
         result = self.normalize_minmax(result)
         result = cmap(result)[:, :, :3] * 255
@@ -885,6 +888,7 @@ def model_init(model_path: str) -> Tuple:
 
 beverage_classes = ["cup", "can", "bottle"]
 
+warnings.filterwarnings("ignore", category=FutureWarning)
 # YOLO 모델을 사용하여 음료 객체를 감지
 def detect_beverages(frame):
     results = model2(frame)  # 이미지에서 객체 검출
@@ -1061,22 +1065,22 @@ def run_pose_and_beverage_estimation(webcam_processor, result_queue):
         webcam_processor.release()
 
 def unified_depth_pose_estimation(webcam_processor):
-    global midas_model_path, pose_model_path  # Accessing global model paths
+    global midas_model_path, pose_model_path  # 전역 모델 경로 접근
 
-    # Initialize OpenVINO Core
+    # OpenVINO Core 초기화
     core = ov.Core()
     cache_folder = Path("cache")
-    cache_folder.mkdir(exist_ok=True)
+    cache_folder.mkdir(parents=True, exist_ok=True)
     core.set_property({props.cache_dir(): cache_folder})
 
-    # Load MiDaS Depth Estimation Model
+    # MiDaS 깊이 추정 모델 로드
     model_depth = core.read_model(midas_model_path)
     compiled_model_depth = core.compile_model(model=model_depth, device_name="GPU.1")
     input_key_depth = compiled_model_depth.input(0)
     output_key_depth = compiled_model_depth.output(0)
     depth_processor = DepthProcessor(compiled_model_depth, input_key_depth, output_key_depth)
 
-    # Load Pose Estimation Model
+    # 포즈 추정 모델 로드
     model_pose = core.read_model(pose_model_path)
     compiled_model_pose = core.compile_model(model=model_pose, device_name="GPU.1")
     input_key_pose = compiled_model_pose.input(0)
@@ -1086,86 +1090,109 @@ def unified_depth_pose_estimation(webcam_processor):
 
     try:
         while True:
-            # Read frame from webcam
+            # 웹캠에서 프레임 읽기
             frame = webcam_processor.read_frame()
 
-            # Skip frames to improve performance (optional)
+            # 성능 향상을 위해 프레임 건너뛰기 (선택 사항)
             if int(time.time() * 10) % 2 != 0:
                 continue
 
-            ### Depth Estimation ###
+            ### 깊이 추정 ###
             depth_result = depth_processor.process_frame(frame)
             depth_map = (depth_result.squeeze(0) - depth_result.min()) / (depth_result.max() - depth_result.min())
             depth_frame = depth_processor.visualize_result(depth_result)
 
-            # Analyze the depth map by splitting into 16 sections
+            # 깊이 맵을 16등분하여 분석
             decision = process_depth_sections(depth_map, num_rows=4, num_cols=4, threshold=0.8)
 
-            # Display the depth map with section information (1280x720 resolution)
+            # 섹션 정보와 함께 깊이 맵 표시 (1280x720 해상도)
             depth_frame_with_sections = display_depth_sections(
                 depth_frame.copy(), depth_map, num_rows=4, num_cols=4, output_width=1280, output_height=720
             )
 
-            # Add decision text to depth output
+            # 깊이 출력에 결정 텍스트 추가
             cv2.putText(
                 depth_frame_with_sections,
                 decision,
                 (50, 50),
                 cv2.FONT_HERSHEY_SIMPLEX,
                 1.0,
-                (0, 0, 255),  # Red color text
+                (0, 0, 255),  # 빨간색 텍스트
                 2,
                 cv2.LINE_AA
             )
 
-            ### Pose Estimation ###
-            # Prepare input for pose estimation
+            ### 포즈 추정 ###
+            # 포즈 추정을 위한 입력 준비
             input_img = cv2.resize(frame, (width, height), interpolation=cv2.INTER_AREA)
             input_img = input_img.transpose((2, 0, 1))[np.newaxis, ...]
 
-            # Run pose estimation inference
+            # 포즈 추정 추론 실행
             results_pose = compiled_model_pose([input_img])
             pafs = results_pose[pafs_output_key]
             heatmaps = results_pose[heatmaps_output_key]
             poses, _ = process_results(frame, pafs, heatmaps)
 
-            # Draw poses on the frame
+            # 프레임에 포즈 그리기
             frame_with_poses = draw_poses_with_description(frame, poses, 0.1)
 
-            ### Beverage Detection (Optional) ###
+            ### 음료 객체 감지 ###
             detections = detect_beverages(frame_with_poses)
             frame_with_all = draw_beverages(frame_with_poses, detections)
 
-            ### Combine Depth and Pose Outputs ###
-            # Combine depth frame with sections and frame with poses and beverages side by side
+            # 각 손과 컵 객체의 충돌 검사 (영역을 30픽셀 확장하여 조건 완화)
+            for pose in poses:
+                right_hand = pose[9, :2]  # 오른손목 좌표
+                left_hand = pose[10, :2]  # 왼손목 좌표
+                if pose[9, 2] > 0.1 or pose[10, 2] > 0.1:  # 각 손이 감지된 경우
+                    for *box, conf, cls in detections:
+                        x1, y1, x2, y2 = map(int, box)
+                        # 손 위치가 컵 영역 내에 있는지 확인 (영역을 30픽셀 확장)
+                        if (pose[9, 2] > 0.1 and x1 - 30 <= right_hand[0] <= x2 + 30 and y1 - 30 <= right_hand[1] <= y2 + 30) or \
+                            (pose[10, 2] > 0.1 and x1 - 30 <= left_hand[0] <= x2 + 30 and y1 - 30 <= left_hand[1] <= y2 + 30):
+                            cv2.putText(
+                                frame_with_all,
+                                "CATCH!!",
+                                (frame.shape[1] // 2, frame.shape[0] // 2),  # 화면 중앙에 출력
+                                cv2.FONT_HERSHEY_SIMPLEX,
+                                2,  # 글자 크기
+                                (0, 255, 255),  # 노란색
+                                5,  # 글자 두께
+                                cv2.LINE_AA,
+                            )
+                            print("CATCH!!")  # 터미널에도 'CATCH!!' 출력
+                            break
+
+            ### 깊이와 포즈 출력 결합 ###
+            # 섹션이 있는 깊이 프레임과 포즈 및 음료 객체가 있는 프레임을 나란히 결합
             combined_frame = np.hstack((cv2.resize(depth_frame_with_sections, (640, 480)), cv2.resize(frame_with_all, (640, 480))))
 
-            # Display the combined frame
+            # 결합된 프레임 표시
             cv2.imshow("Depth and Pose Estimation", combined_frame)
 
-            # 'q' key to quit
+            # 'q' 키를 눌러 종료
             if cv2.waitKey(1) & 0xFF == ord('q'):
                 break
 
-            # Small delay to release CPU resources
+            # CPU 리소스를 해제하기 위한 짧은 지연
             time.sleep(0.01)
 
     except Exception as e:
         print(f"Error during unified estimation: {e}")
     finally:
-        # Release webcam resources
+        # 웹캠 자원 해제
         webcam_processor.release()
         cv2.destroyAllWindows()
 
-# Main function to start the unified estimation
+# 통합 추정을 시작하는 메인 함수
 def main():
-    # Setup models (download if not already present)
+    # 모델 설정 (이미 다운로드되어 있지 않은 경우 다운로드)
     setup_models()
 
-    # Initialize webcam processor
+    # 웹캠 프로세서 초기화
     webcam_processor = WebcamProcessor(camera_id=0)
 
-    # Run the unified depth and pose estimation
+    # 통합 깊이 및 포즈 추정 실행
     unified_depth_pose_estimation(webcam_processor)
 
 if __name__ == "__main__":
