@@ -99,3 +99,15 @@ $ find ./ -iname *.bin|xargs ls -l
   | 정수빈 |  |
 * Project Github : https://github.com/spotSide
 * 발표자료 : https://github.com/spotSide
+
+### Team: JOJO
+<프로젝트 요약>
+* Members
+  | Name | Role |
+  |----|----|
+  | 양승용 |  |
+  | 오태영 |  |
+  | 박철우 |  |
+  | 최은호 |  |
+* Project Github : https://github.com/syyang0127/TEAM_JOJO
+* 발표자료 : https://github.com/syyang0127/TEAM_JOJO
