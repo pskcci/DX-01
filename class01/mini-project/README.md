@@ -12,7 +12,7 @@
 
 * Project Github : https://github.com/pskcci/DX-01/tree/main/class01/mini-project/01_kbg_khw
  
-* 발표자료 : https://github.com/pskcci/DX-01/blob/main/class01/mini-project/01_kbg_khw/01_kbg_khw_ppt.pptx
+* 발표자료 : https://github.com/pskcci/DX-01/blob/main/class01/mini-project/01_kbg_khw/01_kbg_khw.odp
 
 
 ### Team : pkg & ceh
