@@ -106,9 +106,11 @@ while cap.isOpened():
     success, frame= cap.read()
     if not success:
         break
-
+    
+    frame = cv2.flip(frame, 1)
     # 이미지 전처리 (BGR -> RGB 변환)
     input_image = frame[..., ::-1]
+    # input_image = cv2.cvtColor(cv2.flip(frame, 1), cv2.COLOR_BGR2RGB)
 
     # 얼굴 검출 (OpenVINO face-detection 모델 사용)
     resized_frame = cv2.resize(input_image, (300, 300))
@@ -179,8 +181,7 @@ while cap.isOpened():
             cv2.rectangle(frame, (xmin, ymin), (xmax, ymax), (0, 255, 0), 2)
             cv2.putText(frame, f"Emotion: {emotion}", (xmin, ymin - 10), cv2.FONT_HERSHEY_SIMPLEX, 0.8, (0, 255, 0), 2)
 
-    # Flip + convert img from BGR to RGB
-    # img = cv2.cvtColor(cv2.flip(frame, 1), cv2.COLOR_BGR2RGB)
+    # convert img from BGR to RGB
     img = cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)
 
     # To improve performance
@@ -261,11 +262,9 @@ while cap.isOpened():
         _, l_rvec, l_tvec = cv2.solvePnP(leye_3d, face_2d_head, cam_matrix, dist_coeffs, flags=cv2.SOLVEPNP_ITERATIVE)
         _, r_rvec, r_tvec = cv2.solvePnP(reye_3d, face_2d_head, cam_matrix, dist_coeffs, flags=cv2.SOLVEPNP_ITERATIVE)
 
-
         # Get rotational matrix from rotational vector
         l_rmat, _ = cv2.Rodrigues(l_rvec)
         r_rmat, _ = cv2.Rodrigues(r_rvec)
-
 
         # [0] changes pitch
         # [1] changes roll
@@ -314,8 +313,6 @@ while cap.isOpened():
                 cv2.line(img, l_corner, tuple(np.ravel(l_gaze_axis[1]).astype(np.int32)), (0,255,0), 3)
             cv2.line(img, l_corner, tuple(np.ravel(l_gaze_axis[2]).astype(np.int32)), (0,0,255), 3)
 
-        
-    
         # Get left eye corner as integer
         r_corner = face_2d_head[3].astype(np.int32)
 
@@ -335,9 +332,7 @@ while cap.isOpened():
                 cv2.line(img, r_corner, tuple(np.ravel(r_gaze_axis[0]).astype(np.int32)), (255,0,0), 3)
                 cv2.line(img, r_corner, tuple(np.ravel(r_gaze_axis[1]).astype(np.int32)), (0,255,0), 3)
             cv2.line(img, r_corner, tuple(np.ravel(r_gaze_axis[2]).astype(np.int32)), (0,0,255), 3)
-                
-
-
+            
     cv2.imshow('Head Pose Estimation', img)
 
     if cv2.waitKey(5) & 0xFF == ord('q'):
