@@ -61,8 +61,8 @@
   | 김형석 | Project lead, 프로젝트를 총괄하고 망하면 책임진다. |
   | 장해준 | Project manager, 마일스톤을 생성하고 프로젝트 이슈 진행상황을 관리한다. |
 
-* Project Github : TBD
-* 발표자료 : TBD
+* Project Github : https://github.com/pskcci/DX-01/tree/main/class01/mini-project/05_kimANDjang
+* 발표자료 : https://github.com/pskcci/DX-01/blob/main/class01/mini-project/05_kimANDjang/miniproject_group5.pptx
 
 ### Team: double_y
 < 자세교정 도우미 프로그램 >
