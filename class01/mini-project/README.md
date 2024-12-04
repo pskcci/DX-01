@@ -37,8 +37,8 @@
   | 정수빈 | Project member, 프로젝트 멤버1 |
   | 문재웅 | Project member, 프로젝트 멤버2 |
 
-* Project Github :  
-* 발표자료 : 
+* Project Github :  https://github.com/pskcci/DX-01/tree/main/class01/mini-project/03_SBJW
+* 발표자료 : https://github.com/pskcci/DX-01/blob/main/class01/mini-project/03_SBJW/03minipro.pptx
 
 
 ### Team: Chulwoo & TY
