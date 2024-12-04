@@ -37,8 +37,8 @@
   | 정수빈 | Project member, 프로젝트 멤버1 |
   | 문재웅 | Project member, 프로젝트 멤버2 |
 
-* Project Github :  
-* 발표자료 : 
+* Project Github :  https://github.com/pskcci/DX-01/tree/main/class01/mini-project/03_SBJW
+* 발표자료 : https://github.com/pskcci/DX-01/blob/main/class01/mini-project/03_SBJW/03minipro.pptx
 
 
 ### Team: Chulwoo & TY
@@ -50,7 +50,7 @@
   | 박철우 | Project manager, 마일스톤을 생성하고 프로젝트 이슈 진행상황을 관리한다. |
 
 * Project Github : https://github.com/pskcci/DX-01/tree/main/class01/mini-project/06_ChulwooAndTy
-* 발표자료 : https://github.com/pskcci/DX-01/blob/main/class01/mini-project/06_ChulwooAndTy/6jo_miniproject_tentative.pdf
+* 발표자료 : https://github.com/pskcci/DX-01/blob/main/class01/mini-project/06_ChulwooAndTy/6jo_miniproject.pdf
 
 
 ### Team: kimANDjang
@@ -61,8 +61,8 @@
   | 김형석 | Project lead, 프로젝트를 총괄하고 망하면 책임진다. |
   | 장해준 | Project manager, 마일스톤을 생성하고 프로젝트 이슈 진행상황을 관리한다. |
 
-* Project Github : TBD
-* 발표자료 : TBD
+* Project Github : https://github.com/pskcci/DX-01/tree/main/class01/mini-project/05_kimANDjang
+* 발표자료 : https://github.com/pskcci/DX-01/blob/main/class01/mini-project/05_kimANDjang/miniproject_group5.pptx
 
 ### Team: double_y
 < 자세교정 도우미 프로그램 >
@@ -72,6 +72,6 @@
   | 양승용 | Project member, 프로젝트 멤버1 |
   | 양영준 | Project member, 프로젝트 멤버2 |
 
-* Project Github :
-* 발표자료 : 
+* Project Github : https://github.com/pskcci/DX-01/tree/main/class01/mini-project/02_double_y
+* 발표자료 : https://github.com/pskcci/DX-01/blob/main/class01/mini-project/02_double_y/2%EC%A1%B0%20Mini%20Project.pptx
 
