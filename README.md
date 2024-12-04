@@ -86,3 +86,16 @@ $ find ./ -iname *.bin|xargs ls -l
 * Project Github : https://github.com/creator928
 * 발표자료 : https://github.com/creator928
 <!-- 여기가 주석 끝입니다. -->
+
+### Team: 쥬엘
+<프로젝트 요약>
+시각 장애인용 비전 보조 프로그램
+* Members
+  | Name | Role |
+  |----|----|
+  | 김헌우 |  |
+  | 김형석 |  |
+  | 문재웅 |  |
+  | 정수빈 |  |
+* Project Github : https://github.com/spotSide
+* 발표자료 : https://github.com/spotSide
