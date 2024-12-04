@@ -73,16 +73,16 @@ $ find ./ -iname *.bin|xargs ls -l
 
 ### 제출현황
 
-### Team: 뭔가 센스있는 팀명
+<!-- 이건 주석 시작입니다. 여기부터 "끝"주석까지 복사하여 사용해주세요. -->
+### Team: 해 조(Team Do It)
 <프로젝트 요약>
 * Members
   | Name | Role |
   |----|----|
-  | 채치수 | Project lead, 프로젝트를 총괄하고 망하면 책임진다. |
-  | 송태섭 | Project manager, 마일스톤을 생성하고 프로젝트 이슈 진행상황을 관리한다. |
-  | 정대만 | UI design, 사용자 인터페이스를 정의하고 구현한다. |
-  | 채소연 | AI modeling, 원하는 결과가 나오도록 AI model을 선택, data 수집, training을 수행한다. |
-  | 권준호 | Architect, 프로젝트의 component를 구성하고 상위 디자인을 책임진다. |
-* Project Github : https://github.com/goodsense/project_awesome.git
-* 발표자료 : https://github.com/goodsense/project_aewsome/doc/slide.ppt
-
+  | 박경규 | Project Leader , 프로젝트 기획 및 관리, 기술/비기술 요인 업무 담당 및 개발 통괄 |
+  | 김범규 | Lead Developer, 주요 알고리즘 설계 및 구현,AI 모델링 적용 및 최적화, 아키텍처 설계 및 통합 개발 |
+  | 양영준 | Sub Developer, 서브 기능 개발 및 유지 보수, 개발 업무 수행 및 지원, 디버깅 및 최적화 |
+  | 장해준 | AI Engineer, 머신러닝 모델 검색/학습, 모델 환경 구축 및 파이프 파인 설계 및 평가 |
+* Project Github : https://github.com/creator928
+* 발표자료 : https://github.com/creator928
+<!-- 여기가 주석 끝입니다. -->
