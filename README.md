@@ -74,8 +74,11 @@ $ find ./ -iname *.bin|xargs ls -l
 ### 제출현황
 
 <!-- 이건 주석 시작입니다. 여기부터 "끝"주석까지 복사하여 사용해주세요. -->
-### Team: 해 조(Team Do It)
+### Team: TOST (Team of Safe T)
 <프로젝트 요약>
+
+산업 현장에서 발생할 수 있는 다양한 위험 상황을 실시간으로 탐지하고, 구조 활동을 지원하는 감시 시스템을 구축하는 프로그램 개발 프로젝트
+
 * Members
   | Name | Role |
   |----|----|
@@ -83,7 +86,7 @@ $ find ./ -iname *.bin|xargs ls -l
   | 김범규 | Lead Developer, 주요 알고리즘 설계 및 구현,AI 모델링 적용 및 최적화, 아키텍처 설계 및 통합 개발 |
   | 양영준 | Sub Developer, 서브 기능 개발 및 유지 보수, 개발 업무 수행 및 지원, 디버깅 및 최적화 |
   | 장해준 | AI Engineer, 머신러닝 모델 검색/학습, 모델 환경 구축 및 파이프 파인 설계 및 평가 |
-* Project Github : https://github.com/creator928
+* Project Github : https://github.com/creator928/IndustrialSafetyAiCctv
 * 발표자료 : https://github.com/creator928
 <!-- 여기가 주석 끝입니다. -->
 
