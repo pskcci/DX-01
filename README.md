@@ -92,14 +92,14 @@ $ find ./ -iname *.bin|xargs ls -l
 
 ### Team: 쥬엘
 <프로젝트 요약>
-시각 장애인용 비전 보조 프로그램
+평범한 일상생활에서 시력이 안좋은 사람들이 겪을 수 있는 상황 중 장애물 탐지와 제품 인식 및 정보 제공을 통해 불편함을 개선하는 보조vision 프로젝트
 * Members
   | Name | Role |
   |----|----|
-  | 김헌우 |  |
-  | 김형석 |  |
-  | 문재웅 |  |
-  | 정수빈 |  |
+  | 문재웅 | 조장 : mono-depth를 활용한 장애물 감지 및 회피 위치 안내, 조원 개발 코드 통합 |
+  | 김형석 | 조원 : 제품 인식을 위한 데이터 annotation 및 학습 |
+  | 김헌우 | 조원 : hand-estimation을 활용한 user 손 인식 및 제품-손동작 인식 시 제품정보 제공 |
+  | 정수빈 | 조원 : 제품 인식을 위한 데이터 셋 수집 및 학습 |
 * Project Github : https://github.com/spotSide
 * 발표자료 : https://github.com/spotSide
 
