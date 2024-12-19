@@ -101,7 +101,7 @@ $ find ./ -iname *.bin|xargs ls -l
   | 김헌우 | 조원 : hand-estimation을 활용한 user 손 인식 및 제품-손동작 인식 시 제품정보 제공 |
   | 정수빈 | 조원 : 제품 인식을 위한 데이터 셋 수집 및 학습 |
 * Project Github : https://github.com/spotSide/projJewel
-* 발표자료 : https://github.com/spotSide/projJewel/tree/main/process
+* 발표자료 : https://github.com/spotSide/projJewel/blob/main/process/2%EC%A1%B0%EB%B0%9C%ED%91%9C%EC%9E%90%EB%A3%8C.odp
 
 ### Team: JOJO
 <프로젝트 요약>
