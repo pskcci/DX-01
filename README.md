@@ -118,5 +118,5 @@ AI 모델로 학습된 건반 계이름 인식 데이터를 활용하여 비교�
   | 오태영 | 조원 : 기본 클래스 구현 및 패키지 구조 설계 |
   | 박철우 | 조원 : Object Detection 모델을 이용한 건반 데이터 학습 |
   | 최은호 | 조원 : 악보 데이터와 웹캠에서 추출한 데이터 동기화 구현 |
-* Project Github : https://github.com/syyang0127/TEAM_JOJO
-* 발표자료 : https://github.com/syyang0127/TEAM_JOJO/blob/main/Piano_Assistant.pdf
+* Project Github : https://github.com/syyang0127/Paradise_Store.git
+* 발표자료 : https://github.com/syyang0127/Paradise_Store/blob/main/Piano_Assistant.pdf
