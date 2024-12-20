@@ -90,7 +90,7 @@ $ find ./ -iname *.bin|xargs ls -l
 * 발표자료 : https://github.com/creator928/IndustrialSafetyAiCctv/blob/main/draft_ISAC.pdf
 <!-- 여기가 주석 끝입니다. -->
 
-### Team: 쥬엘
+### Team: 초롱이
 <프로젝트 요약>
 평범한 일상생활에서 시력이 안좋은 사람들이 겪을 수 있는 상황 중 장애물 탐지와 제품 인식 및 정보 제공을 통해 불편함을 개선하는 보조vision 프로젝트
 * Members
@@ -100,8 +100,8 @@ $ find ./ -iname *.bin|xargs ls -l
   | 김형석 | 조원 : 제품 인식을 위한 데이터 annotation 및 학습 |
   | 김헌우 | 조원 : hand-estimation을 활용한 user 손 인식 및 제품-손동작 인식 시 제품정보 제공 |
   | 정수빈 | 조원 : 제품 인식을 위한 데이터 셋 수집 및 학습 |
-* Project Github : https://github.com/spotSide/projJewel
-* 발표자료 : https://github.com/spotSide/projJewel/blob/main/process/2%EC%A1%B0%EB%B0%9C%ED%91%9C%EC%9E%90%EB%A3%8C.odp
+* Project Github : https://github.com/spotSide/proj_ChorongE
+* 발표자료 : https://github.com/spotSide/proj_ChorongE/blob/main/process/2%EC%A1%B0%20%EB%B0%9C%ED%91%9C%EC%9E%90%EB%A3%8C(fianl).pdf
 
 ### Team: JOJO
 <프로젝트 요약>
