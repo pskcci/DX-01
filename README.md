@@ -87,7 +87,7 @@ $ find ./ -iname *.bin|xargs ls -l
   | 양영준 | Sub Developer, 서브 기능 개발 및 유지 보수, 개발 업무 수행 및 지원, 디버깅 및 최적화 |
   | 장해준 | AI Engineer, 머신러닝 모델 검색/학습, 모델 환경 구축 및 파이프 파인 설계 및 평가 |
 * Project Github : https://github.com/creator928/IndustrialSafetyAiCctv
-* 발표자료 : https://github.com/creator928
+* 발표자료 : https://github.com/creator928/IndustrialSafetyAiCctv/blob/main/ISAC.pdf
 <!-- 여기가 주석 끝입니다. -->
 
 ### Team: 쥬엘
